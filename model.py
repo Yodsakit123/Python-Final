@@ -26,3 +26,15 @@ class Item:
         self.isUse = False #check if item is use or not
     def __str__(self) -> str:#function to automatically return in a readable text
         return f"{self.name} {self.desc} {self.price} {self.dur} {self.atk} {self.code} "
+    #Class Room, contain all the room data
+class Room:
+    #Constructor of Room class
+    def __init__(self, title="", content=[], damage=0, health=0, point = 0, money = 0) :
+        self.title = title #Room name
+        self.content = content #Short description of the room and checking if player actually want to fight
+        self.damage = damage #Monster damage in the room
+        self.health = health #Monster health in the room
+        self.point = point #Point drop in the room if win
+        self.drops = [] #Item drop in the room if win
+        self.money = money#Money drop in the room
+        self.baseHp = health#Monster health
